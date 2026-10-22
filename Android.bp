@@ -1,0 +1,41 @@
+// Auto-generated Blueprint for system/gsid (framework AIDL)
+
+package {
+    default_applicable_licenses: ["aidl_system_gsid_license"],
+}
+
+license {
+    name: "aidl_system_gsid_license",
+    visibility: [":__subpackages__"],
+    license_kinds: ["SPDX-license-identifier-Apache-2.0"],
+    license_text: ["NOTICE"],
+}
+
+aidl_interface {
+    name: "gsi_aidl_interface",
+    unstable: true,
+    srcs: [":gsiservice_aidl"],
+    local_include_dir: "aidl",
+    backend: {
+        ndk: {
+            enabled: false,
+        },
+    },
+}
+
+filegroup {
+    name: "gsiservice_aidl",
+    srcs: [
+        "aidl/android/gsi/AvbPublicKey.aidl",
+        "aidl/android/gsi/GsiProgress.aidl",
+        "aidl/android/gsi/IGsiService.aidl",
+        "aidl/android/gsi/IGsiServiceCallback.aidl",
+        "aidl/android/gsi/IImageService.aidl",
+        "aidl/android/gsi/IProgressCallback.aidl",
+        "aidl/android/gsi/MappedImage.aidl",
+    ],
+    path: "aidl",
+    visibility: [
+        "//visibility:public",
+    ],
+}
